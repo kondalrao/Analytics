@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %} Fabric01 {% endblock %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+	{% for entry in list -%}
+		<div>
+		{% set tokens = entry.split(" ") %}
+		{% if tokens|length > 2 %}
+			<span class=perms>{{ tokens[0] }}</span> {{ tokens[1:]|join(' ') }}
+		{% else %}
+			{{entry}}
+		{% endif %}
+		</div>
+	{%- endfor %}
+{% endblock %}
+

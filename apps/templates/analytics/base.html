@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('.static', filename='style.css') }}">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <title>{% block title %}{% endblock %} - My Webpage</title>
+    {% endblock %}
+</head>
+<body>
+    <div id="header">
+        {% block header %}
+        Base Header
+        {% endblock %}
+    </div>
+
+    <div id="content">{% block content %}{% endblock %}</div>
+
+    <div id="footer">
+        {% block footer %}
+        &copy; Copyright 2015 by <a href="http://kondal.org/">Kondal Rao Komaragiri</a>.
+        {% endblock %}
+    </div>
+</body>
+</html>

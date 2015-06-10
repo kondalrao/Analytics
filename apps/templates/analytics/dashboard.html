@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Fabric Telemetry</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="static/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="static/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="static/css/donut.css"/>
+    <link rel="stylesheet" href="static/css/sankey.css"/>
+</head>
+
+
+<body class="application">
+
+    <div class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><span>FABRIC TELEMETRY</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <!-- Port Download Bandwidth Percentage Chart -->
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading text-center">
+                            <strong class="page-title"> Port Bandwidth Usage </strong>
+                        </div>
+                        <div class="panel-body" id="port-bandwidth-usage-container"></div>
+                    </div>
+                </div>
+
+                <!-- CPU Chart -->
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading text-center">
+                            <strong class="page-title">CPU Usage </strong>
+                        </div>
+                        <div class="panel-body" id="svg-line-stats-container"></div>
+                    </div>
+                </div>
+                
+                
+                <!-- Download Bandwidth Distribution Chart -->
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading text-center">
+                            <strong class="page-title"> Port-Server Download Dandwidth Distribution </strong>
+                        </div>
+                        <div class="panel-body" id="svg-sankey-download-container"></div>
+                    </div>
+                </div>
+
+                <!-- Upload Bandwidth Distribution Chart -->
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading text-center">
+                            <strong class="page-title"> Port-Server Upload Dandwidth Distribution </strong>
+                        </div>
+                        <div class="panel-body" id="svg-sankey-upload-container"></div>
+                    </div>
+                </div>
+                
+                <!-- BAR CHART
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading text-center">
+                            <strong class="page-title">Bar Chart </strong>
+                        </div>
+                        <div class="panel-body" id="svg-bar-stats-container"></div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/socket.io.min.js"></script>
+    <script src="static/js/d3.min.js"></script>
+    <!-- <script src="static/js/d3plus.full.js"></script> -->
+    <!-- <script src="static/js/crossfilter.min.js"></script> -->
+    <!-- <script src="static/js/dc.min.js"></script> -->
+            
+        
+    <script src="static/js/donut.js"></script>
+    <script src="static/js/sankey.js"></script>
+    <script src="static/js/analytics.js"></script>
+</body>
+
+</html>
